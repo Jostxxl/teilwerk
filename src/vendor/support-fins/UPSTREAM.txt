@@ -1,0 +1,9 @@
+https://github.com/gittrahan/support-fins
+Commit: 28ed79c48153399e7d3cd3089c981c457446c20c
+MIT, Copyright (c) 2026 gittrahan
+Unmodified geometry and orientation modules. Integration is in ../../supports.mjs
+and ../../support-orientation.mjs. Original license: ../../../licenses/support-fins-MIT.txt.
+
+Unmodified web/draw.js added for explicit two-click manual walls.
+SHA256: 82281f4c88f39d9b5391f0a51b8bba8fdc00919119649a64eea34482e764e8ad
+Adapter: ../../manual-drawn-fins.mjs; no automatic placement is invoked.

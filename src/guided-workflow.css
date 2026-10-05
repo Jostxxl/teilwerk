@@ -1,0 +1,23 @@
+/* Scope all navigation and disclosure styles; existing controls keep their IDs. */
+[data-workflow-hidden]{display:none!important}
+.guided-workflow-nav{min-width:0;flex:1}
+.workflow-steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:3px;align-items:stretch}
+.workflow-steps button{display:flex;align-items:center;justify-content:center;gap:7px;min-width:0;padding:12px 8px;border:0;border-bottom:2px solid transparent;border-radius:var(--pj-radius-sm) var(--pj-radius-sm) 0 0;background:transparent;color:var(--muted,#a6a8a4);font-weight:500;font-size:12px;white-space:nowrap}
+.workflow-steps button:hover:not(:disabled){background:var(--raised,#222);color:var(--text,#f4f5f1)}
+.workflow-steps button.active{border-bottom-color:var(--accent,#f7a61b);color:var(--text,#f4f5f1);background:var(--accent-soft,#f59f2712)}
+.workflow-step-number{display:grid;place-items:center;flex:none;width:22px;height:22px;border:1px solid var(--line-strong,#50514e);border-radius:50%;font-size:10px;font-variant-numeric:tabular-nums}
+.workflow-steps button.active .workflow-step-number{color:#171717;background:var(--accent,#f7a61b);border-color:var(--accent,#f7a61b)}
+.workflow-steps button:disabled{opacity:.4;cursor:default}.workflow-steps button:focus-visible,.workflow-actions button:focus-visible,.workflow-advanced>summary:focus-visible{outline:2px solid var(--accent,#f7a61b);outline-offset:3px}
+.workflow-summary{padding:1px 0 15px;margin-bottom:16px;border-bottom:1px solid var(--line,#333)}
+.workflow-eyebrow{margin:0 0 9px;color:var(--accent,#f7a61b);font-size:10px;font-weight:600;letter-spacing:.08em}
+.workflow-summary h2{margin:0 0 9px;font-size:23px;font-weight:600;line-height:1.2;letter-spacing:-.5px;color:var(--text,#f4f5f1)}
+.workflow-description{font-size:14px;line-height:1.65;color:var(--muted,#a6a8a4);margin:0}
+.workflow-notice{margin:12px 0 0;font-size:11px;line-height:1.6;padding:10px 11px;border-left:2px solid var(--accent,#f7a61b);background:var(--accent-soft,#f59f2712);color:var(--text,#f4f5f1)}
+.workflow-redirect{font-size:11px;min-height:30px;margin-top:8px;width:100%}
+.workflow-actions{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;padding:16px 0 4px;margin-top:16px;border-top:1px solid var(--line,#333)}
+.workflow-actions>button{min-height:44px;font-size:13px;padding:9px 10px}.workflow-actions>.workflow-next{background:var(--accent,#f7a61b);border-color:var(--accent,#f7a61b);color:#171717;font-weight:600}
+.workflow-advanced{grid-column:1/-1;margin-top:3px;background:transparent;border:0;border-top:1px solid var(--line,#333);border-radius:0;padding:0}
+.workflow-advanced>summary{font-size:11px;font-weight:500;color:var(--muted,#a6a8a4);padding:12px 20px 8px 0;cursor:pointer}.workflow-advanced>p{margin:0 0 8px;font-size:10px;line-height:1.5;color:var(--muted,#a6a8a4)}
+@media(max-width:1150px){.workflow-steps button{padding:10px 5px;font-size:10px;gap:4px}.workflow-step-number{width:18px;height:18px;font-size:9px}}
+@media(max-width:780px){.guided-workflow-nav{width:100%;order:3;flex-basis:100%}.workflow-steps button{padding:8px 3px;flex-direction:column;gap:4px;font-size:10px}.workflow-summary h2{font-size:20px}}
+@media(max-width:420px){.workflow-step-label{font-size:9px}.workflow-steps{gap:1px}}

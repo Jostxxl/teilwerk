@@ -1,0 +1,31 @@
+/* Teilwerk help follows the shared Prinjekt website tokens. */
+.studio-help-trigger{display:inline-flex!important;align-items:center;justify-content:center;flex:0 0 38px;box-sizing:border-box;width:38px!important;min-width:38px;max-width:38px;height:38px;min-height:38px;margin:0!important;padding:0!important;border:1px solid transparent!important;border-radius:var(--pj-radius-sm,8px)!important;background:transparent!important;color:var(--pj-text-muted,var(--muted,#3A3A3A))!important;font:600 16px/1 var(--pj-font-body,"Myriad Pro",Sarabun,sans-serif)!important;vertical-align:middle;cursor:help;pointer-events:auto}
+.studio-help-trigger:hover{background:transparent!important;color:var(--pj-orange,#F59F27)!important;border-color:transparent!important}
+.studio-help-trigger:focus-visible{outline:3px solid var(--pj-orange,#F59F27)!important;outline-offset:3px}
+summary:has(>.studio-help-trigger){position:relative;box-sizing:border-box;min-height:38px;padding-inline-end:60px!important}
+summary>.studio-help-trigger{position:absolute;right:16px;top:50%;transform:translateY(-50%)}
+.sectiontitle:has(>.studio-help-trigger){position:relative;box-sizing:border-box;min-height:38px;padding-inline-end:44px}
+.sectiontitle:has(>.studio-help-trigger)>h2{min-width:0}
+.sectiontitle>.studio-help-trigger{position:absolute;right:0;top:50%;transform:translateY(-50%)}
+.studio-help-trigger.studio-help-export{display:flex!important;float:none;margin:0 0 8px auto!important}
+.studio-help-dialog{box-sizing:border-box;width:min(540px,calc(100vw - 24px));max-width:calc(100vw - 24px);max-height:calc(100dvh - 24px);margin:auto;padding:0;border:1px solid var(--pj-border,var(--line,#C7C7C7));border-radius:var(--pj-radius-lg,18px);background:var(--pj-surface,var(--panel,#FCFBFB));color:var(--pj-text,var(--text,#111111));box-shadow:var(--pj-shadow-md,0 16px 40px #11111130);color-scheme:inherit;font:16px/1.6 var(--pj-font-body,"Myriad Pro",Sarabun,sans-serif);text-align:left;overflow:auto}
+.studio-help-dialog::backdrop{background:color-mix(in srgb,#111111 60%,transparent)}
+.studio-help-dialog *{box-sizing:border-box}
+.studio-help-header{display:flex;align-items:center;justify-content:space-between;gap:16px;height:auto;min-height:0;padding:16px 24px;border-bottom:3px solid var(--pj-orange,#F59F27);background:var(--pj-surface-subtle,var(--raised,#EBEBEB));color:var(--pj-text,var(--text,#111111));font:600 12px/1.4 var(--pj-font-display,"Stara","Francois One",sans-serif);letter-spacing:.04em}
+.studio-help-dialog button{width:auto;min-height:44px;margin:0;padding:10px 16px;border:1px solid var(--pj-border-strong,var(--line-strong,#3A3A3A));border-radius:var(--pj-radius-sm,8px);background:var(--pj-surface,var(--panel,#FCFBFB));color:var(--pj-text,var(--text,#111111));font:600 14px/1.4 var(--pj-font-body,"Myriad Pro",Sarabun,sans-serif);cursor:pointer;transition:background .15s,border-color .15s}
+.studio-help-dialog button:hover{background:var(--pj-surface-subtle,var(--raised,#EBEBEB))}
+.studio-help-dialog button:focus-visible{outline:3px solid var(--pj-orange,#F59F27);outline-offset:3px}
+.studio-help-dialog .studio-help-close{white-space:nowrap;font-size:13px}
+.studio-help-content{padding:24px}
+.studio-help-content h2{margin:0 0 20px;font:600 26px/1.2 var(--pj-font-display,"Stara","Francois One",sans-serif);letter-spacing:-.02em;color:var(--pj-text,var(--text,#111111))}
+.studio-help-content ol{margin:0;padding:0 0 0 22px}
+.studio-help-content li{padding-left:6px;margin:0 0 16px;color:var(--pj-text,var(--text,#111111))}
+.studio-help-content li:last-child{margin-bottom:0}
+.studio-help-content li::marker{color:var(--pj-text-muted,var(--muted,#3A3A3A));font-weight:700}
+.studio-help-status{margin:16px 0 0;padding:12px 16px;border-left:3px solid var(--pj-orange,#F59F27);border-radius:0 var(--pj-radius-sm,8px) var(--pj-radius-sm,8px) 0;background:var(--pj-surface-subtle,var(--raised,#EBEBEB));color:var(--pj-text,var(--text,#111111))}
+.studio-help-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:16px 24px;border-top:1px solid var(--pj-border,var(--line,#C7C7C7));background:var(--pj-surface,var(--panel,#FCFBFB))}
+.studio-help-dialog .studio-help-done{background:var(--pj-orange,#F59F27);color:var(--pj-on-orange,#111111);border-color:var(--pj-orange,#F59F27);margin-left:auto}
+.studio-help-dialog .studio-help-done:hover{background:var(--pj-orange-hover,color-mix(in srgb,#F59F27 88%,#111111));border-color:var(--pj-orange-hover,color-mix(in srgb,#F59F27 88%,#111111))}
+.studio-help-dialog [hidden]{display:none!important}
+@media(max-width:460px){.studio-help-dialog{width:calc(100vw - 12px);max-width:calc(100vw - 12px);max-height:calc(100dvh - 12px);border-radius:var(--pj-radius-md,12px)}.studio-help-header{padding:12px 16px;gap:12px}.studio-help-content{padding:20px}.studio-help-content h2{font-size:24px}.studio-help-footer{padding:12px 16px;gap:8px}.studio-help-dialog button{padding:10px 12px}}
+@media(prefers-reduced-motion:reduce){.studio-help-dialog button{transition:none}}

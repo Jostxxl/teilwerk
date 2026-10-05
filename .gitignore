@@ -1,0 +1,23 @@
+node_modules/
+dist/
+dist-web/
+coverage/
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+
+# Customer models and saved work must never be added to source control.
+*.stl
+*.obj
+*.3mf
+*.prinjekt.json
+*.teilwerk.json
+*.zip
+*.pdf
+*.otf
+*.ttf

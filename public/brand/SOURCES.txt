@@ -1,0 +1,48 @@
+Teilwerk / Prinjekt — public browser edition
+
+This directory contains locally served UI resources. The build must not fetch
+fonts or logos from the URLs below at runtime; the URLs document provenance.
+
+BRAND ASSETS — NOT COVERED BY THE APPLICATION MIT LICENSE
+
+Prinjekt logos and favicon were obtained from the official Prinjekt website
+on 2026-10-02. They remain brand assets; inclusion does not grant general
+trademark rights or permission to present an independent service as Prinjekt.
+
+prinjekt-light.png
+https://prinjekt.de/cdn/shop/files/Prinjekt-1_Prinjekt_Wortmarke.png?v=1666781928&width=600
+
+prinjekt-dark.png
+https://prinjekt.de/cdn/shop/files/Design_ohne_Titel_25.png?v=1765207558&width=600
+
+favicon.png
+https://prinjekt.de/cdn/shop/files/fav.png?crop=center&height=32&v=1761059178&width=32
+
+OPEN FONT — SARABUN
+
+Copyright 2018 The Sarabun Project Authors.
+Upstream project: https://github.com/cadsondemak/Sarabun
+License: SIL Open Font License 1.1; see ../../licenses/Sarabun-OFL.txt
+in the source repository, or /licenses/Sarabun-OFL.txt in the built app.
+
+The following WOFF2 resources were obtained from the official site's font CDN
+on 2026-10-02. They are served by Teilwerk itself, not loaded from this CDN.
+
+sarabun-regular.woff2 (regular / 400)
+https://prinjekt.de/cdn/fonts/sarabun/sarabun_n4.6a9ee0c3492d21940def7aead8e258059fbc08f1.woff2
+
+sarabun-bold.woff2 (bold / 700)
+https://prinjekt.de/cdn/fonts/sarabun/sarabun_n7.ff7a61d1ee0ceac9670b548aff8c5c92e8f0a70d.woff2
+
+Proprietary Myriad Pro and Stara font files are intentionally not included.
+The public edition uses Sarabun for its UI typography.
+
+DESIGN REFERENCE
+
+The Prinjekt color reference is the official site's token stylesheet:
+https://prinjekt.de/cdn/shop/t/44/assets/prinjekt-tokens.css
+Orange #F59F27; dark canvas #111111; light canvas #EBEBEB;
+light surface #FCFBFB; dark surface #1B1B1B.
+
+For application dependencies and the separate Helvetiker geometry-font
+license, see ../../THIRD_PARTY_NOTICES.md in the source repository.
