@@ -1,5 +1,7 @@
 # Teilwerk von Prinjekt
 
+[Teilwerk starten](https://jostxxl.github.io/teilwerk/) · [Tutorial öffnen](https://jostxxl.github.io/teilwerk/?tutorial=1) · [Teilwerk auf prinjekt.de](https://prinjekt.de/pages/teilwerk)
+
 Teilwerk bereitet große 3D-Modelle für Druck und Montage vor. Die deutschsprachige Arbeitsoberfläche führt durch **Modell → Aufteilen → Nummern → Drucklage → Stifte → Export**. Schnittvorschläge werden zunächst angezeigt und erst nach Berechnung und ausdrücklicher Übernahme angewendet.
 
 Diese Ausgabe ist eine statische Browseranwendung. Geometrie wird mit Manifold WebAssembly auf dem eigenen Gerät berechnet. Sie enthält keinen CGAL-Dienst, keinen nativen Desktop-Helfer und keine privaten Modell- oder Projektdateien.
