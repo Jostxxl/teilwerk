@@ -19,7 +19,8 @@ function fixture({bound=false,thickness=20}={}){
  const nativeVolume=solid.volume();solid.delete();center.delete();source.delete();return{part,spec:{a,b},nativeVolume};
 }
 test('two-click wall uses untouched upstream, flat bed, real positive teeth and one body',()=>{
- assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../src/vendor/support-fins/draw.js',import.meta.url))).digest('hex'),'82281f4c88f39d9b5391f0a51b8bba8fdc00919119649a64eea34482e764e8ad');
+ // Git normalizes text to LF; verify the upstream code independently of checkout line endings.
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../src/vendor/support-fins/draw.js',import.meta.url),'utf8').replace(/\r\n/g,'\n')).digest('hex'),'ba6924e073961c731f213a25b5b2fa7d3309f0212c2083c7a11b3c9d3708e531');
  const {part,spec}=fixture(),before=structuredClone(part),settings={...PROP},support=addManualDrawnFin(api,part,bed,spec),record=support.fins[0];
  assert.deepEqual(part,before);assert.deepEqual(PROP,settings);assert.equal(support.kind,'manual');assert.equal(record.spec.mode,'draw');assert.deepEqual(record.spec.a,spec.a);assert.deepEqual(record.spec.b,spec.b);assert.ok(record.bedArea>1);assert.ok(record.tines>=2);assert.ok(record.modelContactVolume>0);assert.equal(record.minimumBiteFraction,1);
  const fin=toSolid(api,support),body=toSolid(api,part),joined=body.add(fin),components=joined.decompose();try{assert.equal(fin.status(),'NoError');assert.equal(components.length,1);assert.ok(joined.volume()>body.volume());}finally{components.forEach(s=>s.delete());joined.delete();body.delete();fin.delete();}

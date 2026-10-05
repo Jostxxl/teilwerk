@@ -5,5 +5,7 @@ Unmodified geometry and orientation modules. Integration is in ../../supports.mj
 and ../../support-orientation.mjs. Original license: ../../../licenses/support-fins-MIT.txt.
 
 Unmodified web/draw.js added for explicit two-click manual walls.
-SHA256: 82281f4c88f39d9b5391f0a51b8bba8fdc00919119649a64eea34482e764e8ad
+SHA256 (original CRLF copy): 82281f4c88f39d9b5391f0a51b8bba8fdc00919119649a64eea34482e764e8ad
+SHA256 (LF-normalized repository copy): ba6924e073961c731f213a25b5b2fa7d3309f0212c2083c7a11b3c9d3708e531
+Git normalizes line endings; the JavaScript source is otherwise unchanged.
 Adapter: ../../manual-drawn-fins.mjs; no automatic placement is invoked.

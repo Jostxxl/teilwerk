@@ -26,7 +26,8 @@ test('reversed line trims its low trailing end and never changes high endpoint',
 test('valid existing high line keeps literal endpoints and upstream output unchanged',()=>{
  const soup=surface([0,30],[20,20]),a=[0,0,20],b=[30,0,20],p=prepareManualFinPath(a,b,soup);
  assert.equal(p.trimmed,false);assert.deepStrictEqual(p.a,a);assert.deepStrictEqual(p.b,b);assert.deepStrictEqual(drawnWall(a,b,soup),drawnWall(p.a,p.b,soup));
- assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../src/vendor/support-fins/draw.js',import.meta.url))).digest('hex'),'82281f4c88f39d9b5391f0a51b8bba8fdc00919119649a64eea34482e764e8ad');
+ // Git normalizes text to LF; verify the upstream code independently of checkout line endings.
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync(new URL('../src/vendor/support-fins/draw.js',import.meta.url),'utf8').replace(/\r\n/g,'\n')).digest('hex'),'ba6924e073961c731f213a25b5b2fa7d3309f0212c2083c7a11b3c9d3708e531');
 });
 test('genuinely low or too short remaining line has concrete German message',()=>{
  assert.throws(()=>prepareManualFinPath([0,0,0],[30,0,0],surface([0,30],[0,0])),e=>e.reason==='near_bed'&&/höher/.test(e.message));
